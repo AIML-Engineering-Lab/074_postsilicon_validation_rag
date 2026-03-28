@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>P074 — Post-Silicon Validation RAG Platform Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0d1117;color:#c9d1d9}
+.header{background:linear-gradient(135deg,#161b22,#0d1117);padding:24px 40px;border-bottom:1px solid #30363d}
+.header h1{font-size:22px;color:#58a6ff;font-weight:600}
+.header p{color:#8b949e;font-size:13px;margin-top:4px}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;padding:20px 40px}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;text-align:center}
+.kpi .value{font-size:28px;font-weight:700;color:#58a6ff}
+.kpi .label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+.kpi.green .value{color:#3fb950} .kpi.orange .value{color:#f0883e} .kpi.purple .value{color:#d2a8ff}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px 40px}
+.chart-box{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;min-height:380px}
+.chart-box.full{grid-column:1/-1}
+.chart-title{font-size:14px;font-weight:600;color:#c9d1d9;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #21262d}
+.footer{padding:16px 40px;text-align:center;color:#484f58;font-size:11px;border-top:1px solid #21262d;margin-top:20px}
+</style></head><body>
+<div class="header"><h1>P074 — Post-Silicon Validation RAG Platform</h1><p>Enterprise RAG platform for semiconductor post-silicon validation with LangChain, ChromaDB, instructor-large embeddings, Ollama Llama2, and Streamlit chat interface — 100% local, zero API costs.</p></div>
+<div class="kpi-row">  <div class="kpi "><div class="value"><5s</div><div class="label">Response Time</div></div>
+  <div class="kpi green"><div class="value">7</div><div class="label">Doc Formats</div></div>
+  <div class="kpi "><div class="value">100% Local</div><div class="label">Deployment</div></div>
+  <div class="kpi orange"><div class="value">Ollama Llama2</div><div class="label">LLM</div></div>
+  <div class="kpi purple"><div class="value">instructor-large</div><div class="label">Embeddings</div></div>
+</div>
+<div class="charts">
+  <div class="chart-box"><div class="chart-title">Key Metrics</div><div id="ch1"></div></div>
+  <div class="chart-box"><div class="chart-title">Performance</div><div id="ch2"></div></div>
+</div>
+<div class="footer">AIML Engineering Lab — P074 Post-Silicon Validation RAG Platform</div>
+<script>
+const pb='#161b22',gc='#21262d',tc='#c9d1d9';
+const base={paper_bgcolor:pb,plot_bgcolor:pb,font:{color:tc,size:11},margin:{l:50,r:20,t:10,b:40},xaxis:{gridcolor:gc},yaxis:{gridcolor:gc}};
+Plotly.newPlot('ch1',[{x:["Response Time", "Doc Formats", "Deployment", "LLM", "Embeddings"],y:[1, 2, 3, 4, 5],type:'bar',marker:{color:['#58a6ff','#3fb950','#f0883e','#d2a8ff','#79c0ff']}}],base);
+Plotly.newPlot('ch2',[{labels:["Response Time", "Doc Formats", "Deployment", "LLM", "Embeddings"],values:[1, 2, 3, 4, 5],type:'pie',hole:0.4,marker:{colors:['#58a6ff','#3fb950','#f0883e','#d2a8ff','#79c0ff']}}],base);
+</script></body></html>

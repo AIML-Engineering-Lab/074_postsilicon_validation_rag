@@ -1,0 +1,10 @@
+mlruns/
+mlartifacts/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.pipeline/
+*.egg-info/
+dist/
+build/
