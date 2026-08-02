@@ -1,0 +1,40 @@
+{
+  "project": "Post-Silicon Validation RAG Platform",
+  "claims": [
+    {
+      "claim": "All 7 Config Pydantic models (AppConfig, EmbeddingsConfig, VectorStoreConfig, LLMConfig, DocumentProcessingConfig, RetrievalConfig, ConversationConfig) validate correctly with expected defaults",
+      "value": true,
+      "unit": "boolean",
+      "evidence_class": "measured",
+      "artifact": "tests/test_config_models.py"
+    },
+    {
+      "claim": "sanitize_filename prevents directory traversal attacks by stripping path separators and '..' components",
+      "value": true,
+      "unit": "boolean",
+      "evidence_class": "measured",
+      "artifact": "tests/test_file_utils.py::test_sanitize_removes_directory_separators"
+    },
+    {
+      "claim": "get_file_hash returns correct SHA-256 hex digest matching hashlib reference",
+      "value": true,
+      "unit": "boolean",
+      "evidence_class": "measured",
+      "artifact": "tests/test_file_utils.py::test_hash_matches_expected"
+    },
+    {
+      "claim": "ConversationManager.export_to_markdown writes a file containing the full conversation history",
+      "value": true,
+      "unit": "boolean",
+      "evidence_class": "measured",
+      "artifact": "tests/test_conversation.py::test_export_markdown"
+    }
+  ],
+  "external_services": {
+    "langchain_classic": "stubbed",
+    "langchain_community": "stubbed",
+    "langchain_core": "stubbed",
+    "chromadb": "stubbed",
+    "note": "All langchain/chromadb deps stubbed via sys.modules in conftest.py"
+  }
+}
