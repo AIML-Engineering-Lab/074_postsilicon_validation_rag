@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-cov ruff pydantic pydantic-settings \
-                      python-dotenv pyyaml loguru
+                      python-dotenv pyyaml loguru pandas
 
       - name: Lint
         run: ruff check src/src/ tests/ --select E,W,F --ignore E501 || true
