@@ -1,5 +1,9 @@
 # 🔬 P074 — Post-Silicon Validation RAG Platform
 
+[![CI](https://github.com/AIML-Engineering-Lab/074_postsilicon_validation_rag/actions/workflows/ci.yml/badge.svg)](https://github.com/AIML-Engineering-Lab/074_postsilicon_validation_rag/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen)
+[![Evidence](https://img.shields.io/badge/evidence-verified-blue)](evidence/claims.json)
+
 > **Enterprise RAG platform for semiconductor post-silicon validation with LangChain, ChromaDB, instructor-large embeddings, Ollama Llama2, and Streamlit chat interface — 100% local, zero API costs.**
 
 ---
